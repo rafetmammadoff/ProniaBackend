@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Pronia.DAL;
+using Pronia.Models;
+using Pronia.ViewModels.Home;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -18,7 +21,15 @@ namespace Pronia.Controllers
         }
         public IActionResult Index()
         {
-            return View(_context.Sliders.ToList());
+            HomeVM vm = new HomeVM();
+            vm.Sliders = _context.Sliders.OrderBy(x=>x.Order);
+            vm.Services = _context.Services.Where(x => x.IsActive);
+            vm.Featured = _context.Products.Take(8).Include(p => p.ProductImages);
+            vm.BestSeller=_context.Products.OrderByDescending(x=>x.CostCount).Take(8).Include(p => p.ProductImages);
+            vm.Lastest=_context.Products.OrderByDescending(x=>x.CreatedTime).Take(8).Include(p => p.ProductImages);
+            vm.NewProduct=_context.Products.OrderByDescending(x=>x.CreatedTime).Take(4).Include(p => p.ProductImages);
+            vm.Sponsors = _context.Sponsors;
+            return View(vm);
         }
 
     }
