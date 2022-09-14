@@ -5,7 +5,7 @@
         <div class="col-xl-3 col-md-4 col-sm-6 pt-4">
             <div class="product-item">
                 <div class="product-img">
-                    <a href="shop.html">
+                    <a asp-controller="Product" asp-action="Detail" asp-route-id="@pr.Id">
                         <img class="primary-img"
                          src="~/assets/images/website-images//@pr.ProductImages.FirstOrDefault(pi=>pi.Status==true).ImgUrl"
                          alt="Product Images" />
