@@ -25,7 +25,7 @@ namespace Pronia.Controllers
             {
                 return NotFound();
             }
-            Product prod = _context.Products.Where(p => p.Id == id).Include(p => p.ProductImages).FirstOrDefault();
+            Product prod = _context.Products.Where(p => p.Id == id).Include(p => p.ProductImages).Include(p=>p.ProductColors).ThenInclude(p=>p.Color).FirstOrDefault();
             return View(prod);
         }
     }

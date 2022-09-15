@@ -13,5 +13,7 @@ namespace Pronia.DAL
         public DbSet<Service> Services { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Sponsor> Sponsors { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<ProductColors> ProductColors { get; set; }
     }
 }

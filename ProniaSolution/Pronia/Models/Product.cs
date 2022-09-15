@@ -18,5 +18,6 @@ namespace Pronia.Models
         public decimal CostPrice { get; set; }
         public int CostCount { get; set; }
         public ICollection<ProductImages> ProductImages { get; set; }
+        public ICollection<ProductColors> ProductColors { get; set; }
     }
 }
