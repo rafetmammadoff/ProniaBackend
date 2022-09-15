@@ -28,5 +28,18 @@ namespace Pronia.Controllers
             Product prod = _context.Products.Where(p => p.Id == id).Include(p => p.ProductImages).Include(p=>p.ProductColors).ThenInclude(p=>p.Color).FirstOrDefault();
             return View(prod);
         }
+        public IActionResult GetDataById(int? id)
+        {
+            if (id is null)
+            {
+                return NotFound();
+            }
+            Product product = _context.Products.Include(p=>p.ProductImages).Include(p=>p.ProductColors).ThenInclude(pc=>pc.Color).Where(p => p.Id == id).FirstOrDefault();
+            if (product is null)
+            {
+                return NotFound();
+            }
+            return PartialView("_ProductQuickPartialView", product);
+        }
     }
 }
