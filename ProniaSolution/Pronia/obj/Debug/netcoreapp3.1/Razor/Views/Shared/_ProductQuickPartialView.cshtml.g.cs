@@ -21,13 +21,20 @@ using Pronia.ViewModels.Home;
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\Views\_ViewImports.cshtml"
+using Pronia.ViewModels.ProductsFilter;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\Views\_ViewImports.cshtml"
 using Pronia.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"191056544e6968cc332c3a369262a5ddb1185866", @"/Views/Shared/_ProductQuickPartialView.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a951d30106bf34ca274d7b8b9d3dbbbaba3e44d3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"33cf06cceb72bae407c3f85e57e79442a20ca9eb", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__ProductQuickPartialView : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Product>
     #nullable disable
@@ -96,7 +103,7 @@ using Pronia.Models;
 #line hidden
 #nullable disable
             WriteLiteral("                                    <div class=\"swiper-slide\">\r\n                                        <a href=\"#\" class=\"single-img\">\r\n                                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "191056544e6968cc332c3a369262a5ddb11858667888", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "191056544e6968cc332c3a369262a5ddb11858668095", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -183,7 +190,7 @@ AddHtmlAttributeValue("", 1284, item.ImgUrl, 1284, 12, false);
 #line hidden
 #nullable disable
             WriteLiteral("                                   ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "191056544e6968cc332c3a369262a5ddb118586612476", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "191056544e6968cc332c3a369262a5ddb118586612683", async() => {
 #nullable restore
 #line 57 "C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\Views\Shared\_ProductQuickPartialView.cshtml"
                                       Write(item.Color.Name);
@@ -216,7 +223,7 @@ AddHtmlAttributeValue("", 1284, item.ImgUrl, 1284, 12, false);
                             <span class=""selector-title"">Size</span>
                             <select class=""nice-select wide rounded-0"">
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "191056544e6968cc332c3a369262a5ddb118586614210", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "191056544e6968cc332c3a369262a5ddb118586614417", async() => {
                 WriteLiteral("Medium Size & Poot");
             }
             );
@@ -232,7 +239,7 @@ AddHtmlAttributeValue("", 1284, item.ImgUrl, 1284, 12, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "191056544e6968cc332c3a369262a5ddb118586615414", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "191056544e6968cc332c3a369262a5ddb118586615621", async() => {
                 WriteLiteral("Large Size With Poot");
             }
             );
@@ -248,7 +255,7 @@ AddHtmlAttributeValue("", 1284, item.ImgUrl, 1284, 12, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "191056544e6968cc332c3a369262a5ddb118586616620", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "191056544e6968cc332c3a369262a5ddb118586616827", async() => {
                 WriteLiteral("Small Size With Poot");
             }
             );
@@ -301,7 +308,7 @@ AddHtmlAttributeValue("", 1284, item.ImgUrl, 1284, 12, false);
                             <li class=""service-item"">
                                 <div class=""service-img"">
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "191056544e6968cc332c3a369262a5ddb118586619807", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "191056544e6968cc332c3a369262a5ddb118586620014", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -327,7 +334,7 @@ AddHtmlAttributeValue("", 1284, item.ImgUrl, 1284, 12, false);
                             <li class=""service-item"">
                                 <div class=""service-img"">
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "191056544e6968cc332c3a369262a5ddb118586621462", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "191056544e6968cc332c3a369262a5ddb118586621669", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -353,7 +360,7 @@ AddHtmlAttributeValue("", 1284, item.ImgUrl, 1284, 12, false);
                             <li class=""service-item"">
                                 <div class=""service-img"">
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "191056544e6968cc332c3a369262a5ddb118586623116", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "191056544e6968cc332c3a369262a5ddb118586623323", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

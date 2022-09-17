@@ -21,13 +21,20 @@ using Pronia.ViewModels.Home;
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\Views\_ViewImports.cshtml"
+using Pronia.ViewModels.ProductsFilter;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\Views\_ViewImports.cshtml"
 using Pronia.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ff28e851bee1d5cd760257ac0388b9d92b826869", @"/Views/Shared/_PartialViewProduct.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a951d30106bf34ca274d7b8b9d3dbbbaba3e44d3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"33cf06cceb72bae407c3f85e57e79442a20ca9eb", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__PartialViewProduct : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Product>>
     #nullable disable
@@ -79,9 +86,9 @@ using Pronia.Models;
 #line hidden
 #nullable disable
             WriteLiteral("        <div class=\"col-xl-3 col-md-4 col-sm-6 pt-4\">\r\n            <div class=\"product-item\">\r\n                <div class=\"product-img\">\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff28e851bee1d5cd760257ac0388b9d92b8268697958", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff28e851bee1d5cd760257ac0388b9d92b8268698165", async() => {
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ff28e851bee1d5cd760257ac0388b9d92b8268698237", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ff28e851bee1d5cd760257ac0388b9d92b8268698444", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -106,7 +113,7 @@ AddHtmlAttributeValue("", 447, pr.ProductImages.FirstOrDefault(pi=>pi.Status==tr
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ff28e851bee1d5cd760257ac0388b9d92b82686910067", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ff28e851bee1d5cd760257ac0388b9d92b82686910274", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -179,7 +186,7 @@ AddHtmlAttributeValue("", 674, pr.ProductImages.FirstOrDefault(pi=>pi.Status==fa
                             data-bs-toggle=""modal""
                             data-bs-target=""#quickModal"">
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff28e851bee1d5cd760257ac0388b9d92b82686914934", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff28e851bee1d5cd760257ac0388b9d92b82686915141", async() => {
                 WriteLiteral("\r\n                                    <i class=\"pe-7s-look\"></i>\r\n                                ");
             }
             );

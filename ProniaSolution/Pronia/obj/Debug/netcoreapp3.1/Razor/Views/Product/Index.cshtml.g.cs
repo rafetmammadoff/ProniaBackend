@@ -21,13 +21,20 @@ using Pronia.ViewModels.Home;
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\Views\_ViewImports.cshtml"
+using Pronia.ViewModels.ProductsFilter;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\Views\_ViewImports.cshtml"
 using Pronia.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7edfe2a0dd18b6442560a38539a865cf76ff73a6", @"/Views/Product/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a951d30106bf34ca274d7b8b9d3dbbbaba3e44d3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"33cf06cceb72bae407c3f85e57e79442a20ca9eb", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Product_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

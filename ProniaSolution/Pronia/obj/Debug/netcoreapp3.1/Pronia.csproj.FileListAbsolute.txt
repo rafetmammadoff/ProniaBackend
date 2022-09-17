@@ -147,3 +147,4 @@ C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\obj\Debug\netcoreapp
 C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\obj\Debug\netcoreapp3.1\Razor\Views\Product\Detail.cshtml.g.cs
 C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ProductQuickPartialView.cshtml.g.cs
+C:\Users\LENOVO\Desktop\ProniaBackend\ProniaSolution\Pronia\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductFilter.cshtml.g.cs

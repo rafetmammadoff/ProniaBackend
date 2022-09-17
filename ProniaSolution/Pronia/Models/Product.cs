@@ -19,5 +19,7 @@ namespace Pronia.Models
         public int CostCount { get; set; }
         public ICollection<ProductImages> ProductImages { get; set; }
         public ICollection<ProductColors> ProductColors { get; set; }
+        public ICollection<ProductCategories> ProductCategories { get; set; }
+
     }
 }
