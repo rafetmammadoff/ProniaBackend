@@ -43,21 +43,13 @@ namespace Pronia.Controllers
             return PartialView("_ProductQuickPartialView", product);
         }
 
-        public IActionResult ProductFilter(int? colorId,int? categoryId,int? MinPrice,int? MaxPrice)
+        public IActionResult ProductFilter( int? MinPrice, int? MaxPrice)
         {
             var products= _context.Products.Include(p => p.ProductImages).Include(p => p.ProductColors).ThenInclude(pc => pc.Color).AsQueryable();
             int count=products.Count();
-            if (colorId != null)
-            {
-                products = products.Where(p => p.ProductColors.Any(pc => pc.ColorId == colorId));
-            }
-            if (categoryId != null)
-            {   
-                products=products.Where(p=>p.ProductCategories.Any(pc=>pc.CategoriesId == categoryId));
-            }
             if (MinPrice != null && MaxPrice != null)
             {
-                products = products.Where(p => p.SellPrice > MinPrice).Where(p=>p.SellPrice<MaxPrice);
+                products = products.Where(p => p.SellPrice > MinPrice).Where(p => p.SellPrice < MaxPrice);
             }
             FilterVM filterVM = new FilterVM();
             filterVM.Categories = _context.Categories.Include(c => c.ProductCategories).ToList();
@@ -66,6 +58,22 @@ namespace Pronia.Controllers
             filterVM.Products = products;
             
             return View(filterVM);
+        }
+
+        public IActionResult FilteredProduct(int? categoryId, int? colorId )
+        {
+            var products = _context.Products.Include(p => p.ProductImages).Include(p => p.ProductColors).ThenInclude(pc => pc.Color).AsQueryable();
+
+            if (categoryId != null)
+            {
+                products = products.Where(p => p.ProductCategories.Any(pc => pc.CategoriesId == categoryId));
+            }
+            if (colorId != null)
+            {
+                products = products.Where(p => p.ProductColors.Any(pc => pc.ColorId == colorId));
+            }
+            
+            return PartialView("FilterPartialView", products);
         }
     }
 }
