@@ -18,7 +18,14 @@ namespace Pronia.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var products = _context.Products.Include(p => p.ProductImages).Include(p => p.ProductColors).ThenInclude(pc => pc.Color).AsQueryable();
+            int count = products.Count();
+            FilterVM filterVM = new FilterVM();
+            filterVM.Categories = _context.Categories.Include(c => c.ProductCategories).ToList();
+            filterVM.Colors = _context.Colors.Include(c => c.ProductColors).ToList();
+            filterVM.ProductCount = count;
+            filterVM.Products = products;
+            return View(filterVM);
         }
         public IActionResult Detail(int? id)
         {
@@ -43,21 +50,15 @@ namespace Pronia.Controllers
             return PartialView("_ProductQuickPartialView", product);
         }
 
-        public IActionResult ProductFilter( int? MinPrice, int? MaxPrice)
+        [HttpPost]
+        public IActionResult ProductFilter(PriceFilterVm priceFilter)
         {
-            var products= _context.Products.Include(p => p.ProductImages).Include(p => p.ProductColors).ThenInclude(pc => pc.Color).AsQueryable();
-            int count=products.Count();
-            if (MinPrice != null && MaxPrice != null)
-            {
-                products = products.Where(p => p.SellPrice > MinPrice).Where(p => p.SellPrice < MaxPrice);
-            }
-            FilterVM filterVM = new FilterVM();
-            filterVM.Categories = _context.Categories.Include(c => c.ProductCategories).ToList();
-            filterVM.Colors = _context.Colors.Include(c => c.ProductColors).ToList();
-            filterVM.ProductCount = count;
-            filterVM.Products = products;
-            
-            return View(filterVM);
+            if (priceFilter.MinPrice == null) priceFilter.MinPrice = 0;
+            if (priceFilter.MaxPrice == null) priceFilter.MaxPrice = int.MaxValue;
+            var products = _context.Products.Include(p => p.ProductImages)
+                .Where(p => p.SellPrice > priceFilter.MinPrice && p.SellPrice < priceFilter.MaxPrice)
+                .Include(p => p.ProductColors).ThenInclude(pc => pc.Color).ToList();
+            return PartialView("_ProductFilterPartialView", products);
         }
 
         public IActionResult FilteredProduct(int? categoryId, int? colorId )
