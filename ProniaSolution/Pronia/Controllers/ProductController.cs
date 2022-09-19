@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Pronia.DAL;
 using Pronia.Models;
+using Pronia.ViewModels;
 using Pronia.ViewModels.ProductsFilter;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Pronia.Controllers
@@ -75,6 +79,35 @@ namespace Pronia.Controllers
             }
             
             return PartialView("FilterPartialView", products);
+        }
+        public IActionResult AddBasket(int id)
+        {
+            var cookie = HttpContext.Request.Cookies["basket"];
+
+            List<BasketItem> basketItems;
+            if (cookie == null)
+            {
+                basketItems = new List<BasketItem>();
+            }
+            else
+            {
+                basketItems = JsonConvert.DeserializeObject<List<BasketItem>>(cookie);
+            }
+            var exist = basketItems.Find(p => p.ProductId == id);
+            if (exist is null)
+            {
+                basketItems.Add(new BasketItem { ProductId = id, ProductCount = 1 });
+            }
+            else
+            {
+                exist.ProductCount++;
+            }
+
+            string jsonData = JsonConvert.SerializeObject(basketItems);
+            Response.Cookies.Append("basket", jsonData, new CookieOptions { MaxAge = System.TimeSpan.FromDays(5) });
+
+
+            return RedirectToAction("Index","Home");
         }
     }
 }
